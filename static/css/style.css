@@ -1,0 +1,439 @@
+/* ====== TrendHome Apple-Style Minimal Premium CSS ====== */
+
+/* General & Espaciado Global */
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafafc;
+    color: #151515;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    width: 100%;
+}
+@media (max-width: 576px) {
+    .container { padding: 1.2rem 0.5rem; }
+}
+@media (min-width: 1921px) {
+    .container { max-width: 1400px; }
+}
+
+/* Navbar & Footer Minimalista */
+.navbar, footer, .footer {
+    background: #181818;
+    color: #ededed;
+    border-radius: 1.1rem 1.1rem 0 0;
+    font-size: 1rem;
+    box-shadow: 0 0 32px rgba(0,0,0,0.08);
+}
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.45rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff !important;
+}
+.navbar-brand img { max-height: 38px; width: auto; }
+@media (max-width: 400px) {
+    .navbar-brand img { max-height: 30px; }
+}
+.nav-link {
+    font-weight: 500;
+    color: #ededed !important;
+    font-size: 1.08rem;
+    border-radius: 1.2rem;
+    transition: background 0.16s;
+}
+.nav-link:hover {
+    background: #232323;
+    color: #ffd600 !important;
+}
+footer .fs-1, .footer .fs-1 { font-size: 2.5rem !important; }
+footer .d-flex.gap-3 a {
+    opacity: 0.93;
+    transition: opacity 0.17s;
+}
+footer .d-flex.gap-3 a:hover { opacity: 1; }
+
+/* Navbar Sticky (pegada arriba siempre) */
+.navbar.sticky-top {
+    position: sticky !important;
+    top: 0;
+    z-index: 1090 !important;
+    background: #181818 !important;
+    box-shadow: 0 6px 24px -5px rgba(0,0,0,0.13);
+}
+
+/* Títulos y textos principales */
+h1, h2, h3, .carousel-caption h5, .apple-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    line-height: 1.12;
+    color: #151515;
+    text-shadow: none !important;
+    margin-bottom: 1.2rem;
+}
+.carousel-caption h5 { margin-bottom: 0.7rem; }
+.carousel-caption p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: #eee;
+    text-shadow: none;
+    font-weight: 400;
+}
+.apple-title { margin-bottom: 2.5rem; }
+
+/* Secciones aireadas */
+section, .apple-section {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    margin-bottom: 0;
+    background: transparent;
+}
+@media (max-width: 900px) {
+    section, .apple-section { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+}
+@media (max-width: 600px) {
+    section, .apple-section { padding-top: 1.1rem; padding-bottom: 1.1rem;}
+}
+
+/* Hero Carousel */
+.hero-carousel {
+    width: 100vw;
+    min-height: 220px;
+    overflow: hidden;
+    background: #fff;
+}
+.hero-carousel img {
+    width: 100%;
+    height: auto;
+    max-height: 29vw;
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width: 991px) {
+    .hero-carousel img { max-height: 220px; }
+}
+
+/* Cards ultra minimalistas */
+.card, .apple-card {
+    background: #fff;
+    border: none !important;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.11);
+    border-radius: 1.5rem !important;
+    transition: box-shadow 0.22s, transform 0.2s;
+}
+.card:hover, .apple-card:hover {
+    box-shadow: 0 16px 48px rgba(0,0,0,0.17);
+    transform: translateY(-8px) scale(1.04);
+}
+
+/* Productos principales - siempre en una fila */
+#productos .row.g-4 {
+    display: flex;
+    flex-wrap: nowrap;    /* NO se bajan de línea */
+    gap: 32px;
+    justify-content: center;
+    overflow-x: auto;     /* Scroll horizontal en pantallas pequeñas */
+    scrollbar-width: thin;
+    scrollbar-color: #ffd600 #f3f3f3;
+}
+#productos .card {
+    flex: 0 0 210px;
+    min-width: 180px;
+    max-width: 240px;
+    margin: 0;
+}
+.card-img-top {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background: #f9f9f9;
+    transition: transform 0.21s;
+}
+@media (max-width: 1200px) {
+  #productos .row.g-4 { gap: 18px; }
+  #productos .card { flex-basis: 170px; min-width: 150px; }
+  .card-img-top { height: 210px; }
+}
+@media (max-width: 900px) {
+  #productos .row.g-4 { gap: 10px; }
+  #productos .card { flex-basis: 140px; min-width: 120px; }
+  .card-img-top { height: 160px; }
+}
+@media (max-width: 700px) {
+  #productos .row.g-4 { gap: 7px; }
+  #productos .card { flex-basis: 92vw; min-width: 230px; max-width: 350px; }
+  .card-img-top { height: 150px; }
+}
+
+/* Zoom mejorado con microinteracción */
+.card.hover-zoom:hover, .apple-card:hover {
+    transform: translateY(-8px) scale(1.06);
+    z-index: 13;
+}
+
+/* Caption producto estilo Apple */
+.apple-caption, .card-title {
+    font-size: 1.13rem;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 1.1rem 0.5rem;
+}
+
+/* Pasos tipo Apple */
+.step-btn {
+    background: #fff;
+    border: 2px solid #ffd600;
+    border-radius: 1.2rem;
+    padding: 1.2rem 1rem;
+    min-width: 200px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 1.13rem;
+    color: #222;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.16s, border-color 0.17s, box-shadow 0.19s, transform 0.14s;
+}
+.step-btn:hover, .step-btn:focus {
+    background: #fffbe7;
+    color: #b58c00;
+    border-color: #b58c00;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 22px rgba(255,214,0,0.08);
+}
+.step-icon { font-size: 2.1rem; color: #ffd600; transition: color 0.18s, transform 0.18s; }
+.step-btn:hover .step-icon { color: #b58c00; transform: scale(1.13); }
+.step-text { margin-top: 2px; }
+
+/* Inputs y formularios */
+input, textarea, select {
+    border-radius: 1.3rem !important;
+    border: 1.1px solid #ededed !important;
+    box-shadow: 0 1px 7px rgba(0,0,0,0.02);
+    background: #fafafa !important;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    outline: none !important;
+    transition: border-color 0.16s;
+}
+input:focus, textarea:focus, select:focus {
+    border-color: #ffd600 !important;
+    background: #fff;
+}
+
+/* Botones premium planos */
+.btn, .btn-main, .btn-outline-dark {
+    border-radius: 2rem !important;
+    border: none !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.7rem 2rem;
+    background: #ffd600;
+    color: #151515;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: background 0.16s, color 0.16s, transform 0.17s;
+}
+.btn:hover, .btn-main:hover, .btn-outline-dark:hover {
+    background: #ffec80;
+    color: #000;
+    transform: scale(1.04);
+}
+
+/* Testimonios modernos */
+#testimonios blockquote {
+    background: #f7f5f2;
+    border-left: 4px solid #ffd600;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    border-radius: 1.1rem;
+    font-size: clamp(1.02rem, 2vw, 1.18rem);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+
+/* Divisor super sutil */
+.section-divider {
+    border-bottom: 1.5px solid #eaeaea;
+    width: 70%;
+    margin: 3rem auto;
+    opacity: 0.65;
+    border-radius: 20px;
+}
+
+/* Botones flotantes */
+.btn-wapp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    background-color: #25D366;
+    color: white;
+    padding: 16px 18px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 2.5px solid white;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.32);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-wapp:hover {
+    transform: scale(1.13);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.42);
+    background-color: #1da851;
+}
+.btn-carrito {
+    position: fixed;
+    bottom: 170px;
+    right: 24px;
+    z-index: 9999;
+    background-color: #0d6efd;
+    color: white;
+    padding: 16px 18px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 2.5px solid white;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.32);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-carrito:hover {
+    transform: scale(1.13);
+    background-color: #0b5ed7;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.42);
+}
+.carrito-badge {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    background-color: #e30c00;
+    color: white;
+    font-size: 1rem;
+    padding: 4px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 1;
+    min-width: 22px;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+}
+
+/* Microanimaciones */
+@keyframes bump {
+    0%   { transform: scale(1); }
+    10%  { transform: scale(1.15); }
+    30%  { transform: scale(0.97); }
+    50%  { transform: scale(1.04); }
+    100% { transform: scale(1); }
+}
+.bump { animation: bump 300ms ease; }
+
+/* Ajuste para scroll y overflow */
+body, html { overflow-x: hidden; }
+
+/* Más suavidad en modales */
+.modal-content {
+    border-radius: 1.4rem;
+    box-shadow: 0 12px 54px rgba(0,0,0,0.19);
+    transition: box-shadow 0.23s;
+}
+
+/* Responsive adicional para 4K o pantallas pequeñas */
+@media (min-width: 1921px) {
+    .container { max-width: 1440px; }
+    #productos .card, .apple-card { width: 290px; }
+    .card-img-top, .apple-card img { height: 410px; }
+}
+@media (max-width: 375px) {
+    .card-img-top, .apple-card img { height: 150px; }
+}
+
+.tracking-steps div.active {
+    animation: bounce 0.7s;
+    color: #ffd600 !important;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0);}
+    40% { transform: translateY(-12px);}
+    60% { transform: translateY(-7px);}
+}
+.navbar.sticky-top {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1090 !important;
+    background: #181818 !important;
+    box-shadow: 0 6px 24px -5px rgba(0,0,0,0.13);
+}
+#productos .row.g-4 {
+    scrollbar-width: none !important;    /* Firefox */
+    -ms-overflow-style: none !important; /* Internet Explorer 10+ */
+}
+#productos .row.g-4::-webkit-scrollbar {
+    display: none !important;            /* Safari y Chrome */
+}
+.equipo-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
+}
+/* En tu archivo style.css hoover de los botonees de nosotros*/
+.taller-img:hover {
+  transform: scale(1.035);
+  box-shadow: 0 12px 42px rgba(0,0,0,0.14);
+  z-index: 2;
+}
+.btn-cart { /* igual a btn-carrito */
+    position: fixed;
+    bottom: 170px;
+    right: 24px;
+    z-index: 9999;
+    background-color: #0d6efd;
+    color: white;
+    padding: 16px 18px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 2.5px solid white;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.32);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-cart:hover {
+    transform: scale(1.13);
+    background-color: #0b5ed7;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.42);
+}
+.cart-badge {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    background-color: #e30c00;
+    color: white;
+    font-size: 1rem;
+    padding: 4px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 1;
+    min-width: 22px;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TrendHome - Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Muebles modernos, personalizables y funcionales. TrendHome transforma tus espacios con diseño único.">
+  <meta name="keywords" content="muebles, diseño, moderno, escritorio, silla, estantería, hogar, TrendHome, Londres, Inglaterra">
+  <meta name="author" content="TrendHome">
+  <meta name="theme-color" content="#ffd600">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="{{ url_for('static', filename='img/trendhome-logo.png') }}" alt="TrendHome" height="40" style="vertical-align:middle; margin-right:10px;">
+      TrendHome
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="/catalogo">Catálogo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/en">
+            <i class="bi bi-globe"></i> EN
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carrusel principal -->
+<div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/img/banner1.png" class="d-block w-100" alt="Banner 1">
+      <div class="carousel-caption">
+        <h5>Personalizá tu espacio</h5>
+        <p>Diseño moderno y funcional</p>
+        <a href="/catalogo" class="btn btn-warning mt-3 px-4 fw-bold">Ver catálogo</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="static/img/banner2.png" class="d-block w-100" alt="Banner 2">
+      <div class="carousel-caption">
+        <h5>Muebles personalizados</h5>
+        <p>Fabricados a tu medida</p>
+        <a href="/catalogo" class="btn btn-warning mt-3 px-4 fw-bold">Ver catálogo</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="static/img/banner3.png" class="d-block w-100" alt="Banner 3">
+      <div class="carousel-caption">
+        <h5>Inspiración que transforma</h5>
+        <p>Muebles que encajan con vos</p>
+        <a href="/catalogo" class="btn btn-warning mt-3 px-4 fw-bold">Ver catálogo</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Beneficios -->
+<section class="container-fluid px-5 my-5 pb-5 mb-5" id="beneficios" data-aos="fade-up">
+  <h2 class="text-center mb-4">¿Por qué elegir TrendHome?</h2>
+  <div class="row text-center">
+    <div class="col-md-4">
+      <i class="bi bi-tools fs-1 text-warning"></i>
+      <h5 class="mt-3">Fácil de armar</h5>
+      <p>Diseños armables sin complicaciones</p>
+    </div>
+    <div class="col-md-4">
+      <i class="bi bi-truck fs-1 text-warning"></i>
+      <h5 class="mt-3">Envío rápido</h5>
+      <p>Entregas ágiles en todo Londres y UK</p>
+    </div>
+    <div class="col-md-4">
+      <i class="bi bi-award fs-1 text-warning"></i>
+      <h5 class="mt-3">Diseño con garantía</h5>
+      <p>Estética, funcionalidad y respaldo</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Cómo funciona -->
+<section class="container my-5" id="como-funciona" data-aos="fade-up">
+  <h2 class="text-center mb-5">¿Cómo funciona TrendHome?</h2>
+  <div class="row justify-content-center gy-3">
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+      <button class="step-btn" type="button" tabindex="0" aria-label="Elegí tu mueble"
+              data-bs-toggle="modal" data-bs-target="#popupTopMuebles">
+        <span class="step-icon"><i class="bi bi-cart"></i></span>
+        <span class="step-text">Elegí tu mueble</span>
+      </button>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+      <button class="step-btn" type="button" tabindex="0" aria-label="Armamos y enviamos"
+              data-bs-toggle="modal" data-bs-target="#modalVideoArmado">
+        <span class="step-icon"><i class="bi bi-box-seam"></i></span>
+        <span class="step-text">Armamos y enviamos</span>
+      </button>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+      <button class="step-btn" type="button" tabindex="0" aria-label="Lo recibís en casa"
+              data-bs-toggle="modal" data-bs-target="#modalTracking">
+        <span class="step-icon"><i class="bi bi-house-door"></i></span>
+        <span class="step-text">Lo recibís en casa</span>
+      </button>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+      <button class="step-btn" type="button" tabindex="0" aria-label="Disfrutás tu espacio"
+              data-bs-toggle="modal" data-bs-target="#modalInspiracion">
+        <span class="step-icon"><i class="bi bi-emoji-smile"></i></span>
+        <span class="step-text">Disfrutás tu espacio</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL: Top 3 Más vendidos -->
+<div class="modal fade" id="popupTopMuebles" tabindex="-1" aria-labelledby="topMueblesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="topMueblesLabel">Top 3 más vendidos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row text-center">
+          <div class="col-md-4 mb-3">
+            <img src="static/img/mueble1.jpg" class="img-fluid rounded mb-2" style="height:110px;object-fit:cover;">
+            <h6>Mueble Zen</h6>
+            <a href="/catalogo" class="btn btn-outline-dark btn-sm">Ver más</a>
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="static/img/mueble5.png" class="img-fluid rounded mb-2" style="height:110px;object-fit:cover;">
+            <h6>Silla Alcalant</h6>
+            <a href="/catalogo" class="btn btn-outline-dark btn-sm">Ver más</a>
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="static/img/mueble3.jpg" class="img-fluid rounded mb-2" style="height:110px;object-fit:cover;">
+            <h6>Estantería Moderna</h6>
+            <a href="/catalogo" class="btn btn-outline-dark btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Video de armado local -->
+<div class="modal fade" id="modalVideoArmado" tabindex="-1" aria-labelledby="videoArmadoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="videoArmadoLabel">Armado rápido de tu mueble TrendHome</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <video controls width="100%" poster="static/img/banner1.png">
+          <source src="static/videos/armado.mp4" type="video/mp4">
+          Tu navegador no soporta el video HTML5.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Seguimiento (tracking animado) -->
+<div class="modal fade" id="modalTracking" tabindex="-1" aria-labelledby="modalTrackingLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTrackingLabel">¡Tu mueble está en camino!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="tracking-steps mb-4">
+          <div><i class="bi bi-box fs-2 text-warning"></i><div>Taller</div></div>
+          <div><i class="bi bi-truck fs-2 text-warning"></i><div>En ruta</div></div>
+          <div><i class="bi bi-house-door fs-2 text-success"></i><div>Tu casa</div></div>
+        </div>
+        <div class="progress tracking-progress mx-auto" style="height: 10px; max-width: 360px;">
+          <div class="progress-bar bg-warning progress-bar-animated-custom"
+               role="progressbar"
+               style="width: 0%;"
+               aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+               id="trackingProgressBar">
+          </div>
+        </div>
+        <p class="mt-3" id="trackingMsg">¡Faltan pocas horas para recibir tu mueble!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Inspiración antes y después -->
+<div class="modal fade" id="modalInspiracion" tabindex="-1" aria-labelledby="modalInspiracionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalInspiracionLabel">Así transformamos espacios</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div id="inspiracionCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="static/img/inspiracion1.png" class="img-fluid rounded shadow" alt="Antes">
+              <p class="text-muted mt-1">Antes</p>
+            </div>
+            <div class="carousel-item">
+              <img src="static/img/inspiracion2.png" class="img-fluid rounded shadow" alt="Después">
+              <p class="text-muted mt-1">Después</p>
+            </div>
+            <div class="carousel-item">
+              <img src="static/img/inspiracion3.png" class="img-fluid rounded shadow" alt="Cliente feliz">
+              <p class="text-muted mt-1">Cliente feliz</p>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#inspiracionCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#inspiracionCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <blockquote class="blockquote mt-3">
+          <p>“No imaginé cuánto podía cambiar mi hogar con TrendHome. ¡Estoy feliz!”</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- Productos -->
+<section class="container pt-5 mt-5 pb-3" id="productos" data-aos="fade-up">
+  <h2 class="text-center mb-5">Nuestros Productos</h2>
+  <div class="row g-4 justify-content-center">
+    <div class="col-lg-2 col-md-4 col-6">
+      <div class="card hover-zoom">
+        <a href="javascript:void(0);" onclick="abrirImagenGrande('static/img/mueble1.jpg', 'Mueble Zen')" style="cursor:zoom-in;">
+          <img src="static/img/mueble1.jpg" class="card-img-top" alt="Mueble Zen">
+        </a>
+        <div class="card-body text-center">
+          <h5 class="card-title">Mueble Zen</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-6">
+      <div class="card hover-zoom">
+        <a href="javascript:void(0);" onclick="abrirImagenGrande('static/img/mueble2.jpg', 'Mesa Compacta')" style="cursor:zoom-in;">
+          <img src="static/img/mueble2.jpg" class="card-img-top" alt="Mesa Compacta">
+        </a>
+        <div class="card-body text-center">
+          <h5 class="card-title">Mesa Compacta</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-6">
+      <div class="card hover-zoom">
+        <a href="javascript:void(0);" onclick="abrirImagenGrande('static/img/mueble3.jpg', 'Estantería Moderna')" style="cursor:zoom-in;">
+          <img src="static/img/mueble3.jpg" class="card-img-top" alt="Estantería Moderna">
+        </a>
+        <div class="card-body text-center">
+          <h5 class="card-title">Estantería Moderna</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-6">
+      <div class="card hover-zoom">
+        <a href="javascript:void(0);" onclick="abrirImagenGrande('static/img/mueble4.png', 'Silla Moderna')" style="cursor:zoom-in;">
+          <img src="static/img/mueble4.png" class="card-img-top" alt="Silla Moderna">
+        </a>
+        <div class="card-body text-center">
+          <h5 class="card-title">Silla Moderna</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-6">
+      <div class="card hover-zoom">
+        <a href="javascript:void(0);" onclick="abrirImagenGrande('static/img/mueble5.png', 'Silla Alcalant')" style="cursor:zoom-in;">
+          <img src="static/img/mueble5.png" class="card-img-top" alt="Silla Alcalant">
+        </a>
+        <div class="card-body text-center">
+          <h5 class="card-title">Silla Alcalant</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="/catalogo" class="btn btn-outline-dark">Ver más productos</a>
+  </div>
+</section>
+
+<!-- MODAL PARA IMAGEN GRANDE DE PRODUCTO -->
+<div class="modal fade" id="modalImagenGrande" tabindex="-1" aria-labelledby="modalImagenGrandeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalImagenGrandeLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="imagenGrandeModal" src="" alt="Imagen producto" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- Testimonios Carrusel -->
+<section class="container my-5" id="testimonios" data-aos="fade-up">
+  <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
+  <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner text-center">
+      <div class="carousel-item active">
+        <blockquote class="blockquote">
+          <p>“El escritorio llegó rápido y se armó facilísimo. ¡Me encantó!”</p>
+          <footer class="blockquote-footer">Laura G. de Londres</footer>
+        </blockquote>
+      </div>
+      <div class="carousel-item">
+        <blockquote class="blockquote">
+          <p>“Súper recomendado. Calidad y servicio impecable.”</p>
+          <footer class="blockquote-footer">Kevin R. de Londres</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Sobre TrendHome -->
+<section class="container my-5" id="nosotros" data-aos="fade-up">
+  <h2 class="text-center mb-4">Sobre TrendHome</h2>
+  <h5 class="text-center text-muted mb-3">
+    Nuestra pasión es transformar tu día a día con muebles funcionales y diseño de calidad británica.
+  </h5>
+  <p class="text-center">
+    En TrendHome creemos que cada espacio tiene el potencial de inspirar, acoger y transformar vidas.<br>
+    Por eso diseñamos muebles modernos, fáciles de armar y adaptados a tus necesidades, combinando el estilo londinense con materiales duraderos.
+  </p>
+  <div class="row justify-content-center my-4">
+    <div class="col-6 col-md-3 mb-2">
+      <i class="bi bi-award fs-1 text-warning"></i>
+      <p class="mb-0">Diseño londinense</p>
+    </div>
+    <div class="col-6 col-md-3 mb-2">
+      <i class="bi bi-gear fs-1 text-warning"></i>
+      <p class="mb-0">Fácil de armar</p>
+    </div>
+    <div class="col-6 col-md-3 mb-2">
+      <i class="bi bi-tree fs-1 text-warning"></i>
+      <p class="mb-0">Eco-friendly</p>
+    </div>
+    <div class="col-6 col-md-3 mb-2">
+      <i class="bi bi-lightning fs-1 text-warning"></i>
+      <p class="mb-0">Funcionalidad real</p>
+    </div>
+  </div>
+  <div class="text-center my-4">
+    <img src="static/img/equipo-trendhome.png" alt="Equipo TrendHome" class="img-fluid rounded shadow" style="max-width: 320px;">
+    <p class="mt-2 text-muted small">Nuestro equipo en Londres listo para ayudarte</p>
+  </div>
+  <div class="text-center">
+    <a href="{{ url_for('nosotros') }}" class="btn btn-outline-dark btn-sm mt-2">Descubrí quienes Somos</a>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section class="container my-5" id="contacto" data-aos="fade-up">
+  <h2 class="text-center mb-4">¿Listo para transformar tu hogar?</h2>
+  <p class="text-center mb-5">Escribinos y recibí asesoría personalizada de nuestro equipo en Londres.</p>
+  <div class="row justify-content-center">
+    <!-- Formulario -->
+    <div class="col-lg-6">
+      <form class="p-4 rounded shadow-sm bg-white" style="border:1px solid #f7e79b;">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" placeholder="tu@email.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono <span class="text-muted small">(opcional)</span></label>
+          <input type="tel" class="form-control" id="telefono" placeholder="Tu teléfono">
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="3" placeholder="¿En qué podemos ayudarte?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning w-100 py-2 fw-bold" style="font-size:1.2rem;">
+          ¡Quiero transformar mi espacio!
+        </button>
+      </form>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="https://wa.me/50661514959" target="_blank" class="fs-3 text-success" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="fs-3 text-dark" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" class="fs-3 text-primary" title="Facebook"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+    <!-- Mapa y texto -->
+    <div class="col-lg-5 mt-5 mt-lg-0 d-flex flex-column align-items-center">
+      <div class="w-100 rounded-3 shadow-sm overflow-hidden mb-3" style="min-height:220px; border:1px solid #f7e79b;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6814375394926!2d-0.1276471!3d51.5073506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b333444444f%3A0xb0ef39e2494e08f9!2sLondon,%20UK!5e0!3m2!1ses!2scr!4v1716956995055!5m2!1ses!2scr"
+          width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <span class="text-muted small">Visitanos en Londres, Inglaterra</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ - Preguntas Frecuentes -->
+<section class="container my-5" id="faq" data-aos="fade-up">
+  <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1-heading">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+          ¿Cuánto tarda la entrega de los muebles?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Normalmente entregamos en 3 a 7 días hábiles en todo Londres y UK. Te mantenemos informado sobre el envío en todo momento.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq2-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+          ¿Puedo pedir un mueble en un color personalizado?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          ¡Claro! Podés consultar los colores y acabados disponibles y pedir el mueble que combine con tu estilo. Si necesitás asesoría, nuestro equipo te ayuda sin compromiso.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq3-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+          ¿Qué pasa si una pieza llega dañada o falta algo en el paquete?
+        </button>
+      </h2>
+      <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Nos comprometemos a enviarte la pieza de reemplazo sin costo y con la mayor rapidez posible. Solo escribinos por WhatsApp con tu número de orden y fotos del detalle.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq4-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+          ¿Los muebles son fáciles de limpiar?
+        </button>
+      </h2>
+      <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Sí, todos nuestros muebles están diseñados para facilitar la limpieza. Recomendamos pasar un paño húmedo y evitar productos abrasivos.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq5-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+          ¿Tienen descuentos por compras al por mayor?
+        </button>
+      </h2>
+      <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Sí, ofrecemos precios especiales para proyectos, oficinas o compras al por mayor. Escribinos para cotización personalizada y asesoría según tu necesidad.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq6-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+          ¿Incluyen herramientas o tornillos en el paquete?
+        </button>
+      </h2>
+      <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Sí, todos los muebles incluyen tornillos, piezas necesarias y una herramienta básica para el armado. No necesitás nada extra en casa.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq7-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+          ¿Cómo recibo la factura de mi compra?
+        </button>
+      </h2>
+      <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq7-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          La factura electrónica te llega por correo después de tu compra. Si la necesitás de inmediato o con algún detalle extra, solo avisanos por WhatsApp o email.
+        </div>
+      </div>
+    </div>
+    <!-- Preguntas nuevas -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq8-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+          ¿Los muebles requieren herramientas especiales para el armado?
+        </button>
+      </h2>
+      <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faq8-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          No. Todos los muebles TrendHome incluyen una herramienta básica y todos los tornillos necesarios para que armés sin complicaciones. ¡Nada extra!
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq9-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+          ¿Puedo recoger mi mueble en una tienda física?
+        </button>
+      </h2>
+      <div id="faq9" class="accordion-collapse collapse" aria-labelledby="faq9-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          De momento solo trabajamos bajo pedido online y entregamos directamente a tu casa, pero pronto tendremos puntos de retiro físico. ¡Estate atento a nuestras redes!
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq10-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+          ¿Ofrecen garantía en los muebles?
+        </button>
+      </h2>
+      <div id="faq10" class="accordion-collapse collapse" aria-labelledby="faq10-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Sí, todos nuestros muebles cuentan con garantía de fábrica. Si tenés algún inconveniente, te damos solución rápida y personalizada.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq11-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11" aria-expanded="false" aria-controls="faq11">
+          ¿Puedo solicitar factura para empresa?
+        </button>
+      </h2>
+      <div id="faq11" class="accordion-collapse collapse" aria-labelledby="faq11-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          ¡Por supuesto! Emitimos factura electrónica con los datos que ocupés, ya sea para persona física o empresa.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq12-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12" aria-expanded="false" aria-controls="faq12">
+          ¿Cómo puedo seguir el estado de mi pedido?
+        </button>
+      </h2>
+      <div id="faq12" class="accordion-collapse collapse" aria-labelledby="faq12-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Apenas tu pedido esté en camino te mandamos el tracking por WhatsApp o correo. Además, podés consultarnos en cualquier momento y te informamos el avance.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq13-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13" aria-expanded="false" aria-controls="faq13">
+          ¿Puedo pedir diseños personalizados o muebles a medida?
+        </button>
+      </h2>
+      <div id="faq13" class="accordion-collapse collapse" aria-labelledby="faq13-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          ¡Claro! Si tenés una idea o requerimiento especial, escribinos y lo analizamos juntos para hacerte una propuesta a tu gusto y presupuesto.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq14-heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14" aria-expanded="false" aria-controls="faq14">
+          ¿Hacen envíos fuera de Reino Unido?
+        </button>
+      </h2>
+      <div id="faq14" class="accordion-collapse collapse" aria-labelledby="faq14-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Por ahora solo entregamos en Londres y el resto del Reino Unido, pero pronto estaremos enviando a otros países de Europa.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script>
+  // Script para mostrar la imagen grande en el modal
+  function abrirImagenGrande(imagen, titulo) {
+    document.getElementById('imagenGrandeModal').src = imagen;
+    document.getElementById('modalImagenGrandeLabel').innerText = titulo || "";
+    var modal = new bootstrap.Modal(document.getElementById('modalImagenGrande'));
+    modal.show();
+  }
+</script>
+<script>
+  // ANIMACIÓN de la barra y los íconos al abrir el modal de tracking
+  var modalTracking = document.getElementById('modalTracking');
+  if (modalTracking) {
+    modalTracking.addEventListener('show.bs.modal', function () {
+      var bar = document.getElementById('trackingProgressBar');
+      bar.style.transition = "none";
+      bar.style.width = "0%";
+      bar.setAttribute("aria-valuenow", "0");
+      var steps = document.querySelectorAll('.tracking-steps div');
+      steps.forEach(s => s.classList.remove('active'));
+      setTimeout(function () {
+        bar.style.transition = "width 2.2s cubic-bezier(0.55, 0, 0.1, 1)";
+        bar.style.width = "88%";
+        bar.setAttribute("aria-valuenow", "88");
+        setTimeout(function(){ steps[0].classList.add('active'); }, 200);
+        setTimeout(function(){ steps[1].classList.add('active'); }, 1200);
+        setTimeout(function(){ steps[2].classList.add('active'); }, 2000);
+      }, 200);
+    });
+    modalTracking.addEventListener('hidden.bs.modal', function () {
+      var bar = document.getElementById('trackingProgressBar');
+      bar.style.transition = "none";
+      bar.style.width = "0%";
+      bar.setAttribute("aria-valuenow", "0");
+      var steps = document.querySelectorAll('.tracking-steps div');
+      steps.forEach(s => s.classList.remove('active'));
+    });
+  }
+</script>
+
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-2 mb-md-0 small">
+      &copy; 2025 TrendHome. Todos los derechos reservados.
+    </div>
+    <div class="d-flex gap-3">
+      <a href="https://wa.me/50661514959" class="text-success fs-1" title="WhatsApp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.instagram.com/" class="text-white fs-1" title="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.facebook.com/" class="text-white fs-1" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

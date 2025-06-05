@@ -1,0 +1,28 @@
+{% extends "en/base.html" %}
+
+{% block title %}{{ post.title }} - TrendHome Blog{% endblock %}
+
+{% block content %}
+    <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            {# Show image if exists #}
+            {% if post.image %}
+                <img src="{{ url_for('static', filename='img/' ~ post.image) }}"
+                    alt="{{ post.title }}"
+                    class="img-fluid rounded mb-4"
+                    style="max-height:320px;">
+            {% endif %}
+            <h1 class="card-title">{{ post.title }}</h1>
+            <p class="card-text text-muted mb-2"><small>{{ post.date }}</small></p>
+            <hr>
+            <p class="card-text" style="white-space: pre-line;">{{ post.content }}</p>
+            <a href="/en/blog" class="btn btn-link mt-3">← Back to blog</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    {% endblock %}

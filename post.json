@@ -1,0 +1,54 @@
+[
+  {
+  "id": 1,
+  "titulo": "¡Lanzamiento oficial de TrendHome en Londres!",
+  "fecha": "2025-05-15",
+  "resumen": "Celebramos la llegada de TrendHome con una inauguración llena de amigos, clientes y diseño en cada rincón.",
+  "contenido": "El día del lanzamiento de TrendHome fue todo un éxito. Nuestra tienda física en Londres abrió sus puertas a la comunidad, que llegó a descubrir los muebles, compartir ideas y disfrutar de un ambiente moderno y acogedor. Fue un honor ver a tantas familias, parejas y entusiastas del diseño recorriendo cada espacio, probando sofás, conversando y viviendo la experiencia TrendHome. ¡Gracias a todos los que nos acompañaron en este día tan especial!. Si te lo perdiste, te invitamos a visitarnos y ser parte de nuestra historia.",
+  "imagen": "trendhome-lanzamiento-comunidad.png"
+},
+ {
+    "id": 2,
+    "titulo": "5 consejos para mantener tus muebles como nuevos",
+    "fecha": "2025-05-25",
+    "resumen": "Cuidá tus muebles TrendHome y mantenelos impecables con estos sencillos tips de nuestros expertos.",
+    "contenido": "1. Limpiá con paño húmedo y evitá productos abrasivos.\n2. No expongás tus muebles directamente al sol para evitar decoloración.\n3. Revisá y ajustá tornillos cada cierto tiempo.\n4. Usá protectores para patas si tenés pisos delicados.\n5. Si tenés dudas, escribinos por WhatsApp y te asesoramos.",
+    "imagen": "consejos-muebles-trendhome.png"
+},
+
+  {
+    "id": 3,
+    "titulo": "Caso real: Así transformamos el apartamento de Ana",
+    "fecha": "2025-06-01",
+    "resumen": "Ana nos contó su experiencia con TrendHome y cómo sus espacios se volvieron más funcionales y modernos.",
+    "contenido": "Ana vive en un apartamento pequeño en el centro de Londres. Nos contactó buscando un mueble multifuncional y cómodo. Le recomendamos nuestro 'Mueble Zen' y una estantería minimalista. En una semana tenía todo instalado y nos envió fotos felices de su nueva sala. ¿Te gustaría compartir tu experiencia? ¡Escribinos!",
+    "imagen": "apartamento-ana-trendhome.png"
+  },
+  {
+    "id": 4,
+    "titulo": "Tendencias 2025: Colores y materiales top para tu hogar",
+    "fecha": "2025-06-05",
+    "resumen": "Te contamos cuáles son las tendencias en diseño y decoración de interiores para este año.",
+    "contenido": "Los tonos neutros y cálidos vuelven a ser protagonistas en 2025. El uso de madera clara, metal negro mate y textiles sostenibles está en auge. En TrendHome, todos nuestros muebles combinan materiales ecológicos y colores atemporales que nunca pasan de moda.",
+    "imagen": "tendencias-2025-trendhome.png"
+
+  },
+  {
+    "id": 5,
+    "titulo": "Armá tu mueble TrendHome en 5 pasos",
+    "fecha": "2025-06-09",
+    "resumen": "Conocé lo fácil que es armar nuestros productos. Solo necesitás las piezas incluidas en el paquete y ganas de transformar tu espacio.",
+    "contenido": "1. Identificá todas las piezas y tornillos.\n2. Seguí el instructivo paso a paso (incluido en la caja).\n3. No necesitás herramientas especiales, incluimos una llave y destornillador básico.\n4. Si tenés dudas, podés ver el video de armado escaneando el código QR.\n5. ¡Listo! Disfrutá tu mueble TrendHome.",
+    "imagen": "armar-mueble-5pasos-london.png"
+
+  },
+ {
+  "id": 6,
+  "titulo": "¡Conocé al equipo detrás de TrendHome!",
+  "fecha": "2025-06-12",
+  "resumen": "Te presentamos a las personas que hacen posible cada diseño, producción y entrega.",
+  "contenido": "TrendHome está formado por un grupo apasionado de arquitectos, diseñadores y artesanos. Nuestro taller está en Londres y cada mueble pasa por control de calidad antes de llegar a tu casa. Valoramos la comunicación directa con nuestros clientes y la mejora continua.",
+  "imagen": "equipo-trendhome.png"
+}
+
+]

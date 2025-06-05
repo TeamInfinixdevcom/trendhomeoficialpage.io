@@ -1,0 +1,30 @@
+{% extends "es/base.html" %}
+
+
+{% block title %}Blog - TrendHome{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <h1 class="mb-4 text-center">Blog de TrendHome</h1>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      {% for post in posts %}
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title">
+              <a href="/blog/{{ post.id }}" style="text-decoration: none; color: inherit;">
+                {{ post.titulo }}
+              </a>
+            </h3>
+            <p class="card-text text-muted mb-2"><small>{{ post.fecha }}</small></p>
+            <p class="card-text">{{ post.resumen }}</p>
+            <a href="/blog/{{ post.id }}" class="btn btn-outline-dark btn-sm">Leer más</a>
+          </div>
+        </div>
+      {% else %}
+        <p>No hay publicaciones aún. ¡Pronto tendremos novedades!</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

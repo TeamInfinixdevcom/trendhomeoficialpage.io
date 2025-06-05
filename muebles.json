@@ -1,0 +1,75 @@
+[
+  {
+    "imagen": "mueble1.jpg",
+    "nombre": "Escritorio Zen",
+    "descripcion": "Diseño minimalista, ideal para home office.",
+    "precio": "$129"
+  },
+  {
+    "imagen": "mueble2.jpg",
+    "nombre": "Mesa Compacta",
+    "descripcion": "Perfecta para espacios reducidos, fácil de armar y transportar.",
+    "precio": "$99"
+  },
+  {
+    "imagen": "mueble3.jpg",
+    "nombre": "Estantería Moderna",
+    "descripcion": "Madera de alta calidad y estructura firme, ideal para libros o decoración.",
+    "precio": "$159"
+  },
+  {
+    "imagen": "mueble4.png",
+    "nombre": "Silla Moderna",
+    "descripcion": "Diseño ergonómico y ligero, ideal para comedores o escritorios.",
+    "precio": "$89"
+  },
+  {
+    "imagen": "mueble5.png",
+    "nombre": "Silla Moderna",
+    "descripcion": "Diseño ergonómico y ligero, ideal para comedores o espacios de trabajo modernos.",
+    "precio": "$89"
+  },
+  {
+    "imagen": "mueble6.jpg",
+    "nombre": "Consola Moderna",
+    "descripcion": "Ideal para salas o entradas, combina almacenamiento cerrado y estantes abiertos con un diseño elegante.",
+    "precio": "$179"
+  },
+  {
+    "imagen": "mueble7.jpg",
+    "nombre": "Consola Escandinava",
+    "descripcion": "Estilo nórdico con acabados en roble claro, ideal para entradas o salas modernas.",
+    "precio": "$189"
+  },
+  {
+    "imagen": "mueble8.jpg",
+    "nombre": "Centro de Entretenimiento",
+    "descripcion": "Mueble moderno en madera oscura, ideal para TV y almacenamiento decorativo.",
+    "precio": "$229"
+  },
+  {
+    "imagen": "mueble9.jpg",
+    "nombre": "Cómoda Escandinava",
+    "descripcion": "Práctica y elegante, con amplios cajones y acabados en madera clara.",
+    "precio": "$199"
+  },
+  {
+    "imagen": "mueble10.jpg",
+    "nombre": "Estantería Minimalista",
+    "descripcion": "Diseño limpio y funcional con repisas abiertas, ideal para libros o decoración.",
+    "precio": "$149"
+  },
+  {
+    "imagen": "mueble11.jpg",
+    "nombre": "Estante de Cocina",
+    "descripcion": "Organizador abierto de madera y metal, ideal para utensilios y decoración en espacios modernos.",
+    "precio": "$119"
+  },
+  {
+    "imagen": "mueble12.jpg",
+    "nombre": "Cama Infantil Casita",
+    "descripcion": "Estructura con forma de casita, ideal para crear un ambiente acogedor y divertido en el cuarto de los peques.",
+    "precio": "$249"
+  }
+  
+]

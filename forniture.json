@@ -1,0 +1,74 @@
+[
+  {
+    "image": "mueble1.jpg",
+    "name": "Zen Desk",
+    "description": "Minimalist design, ideal for your home office.",
+    "price": "$129"
+  },
+  {
+    "image": "mueble2.jpg",
+    "name": "Compact Table",
+    "description": "Perfect for small spaces, easy to assemble and transport.",
+    "price": "$99"
+  },
+  {
+    "image": "mueble3.jpg",
+    "name": "Modern Shelf",
+    "description": "High-quality wood and sturdy structure, perfect for books or decoration.",
+    "price": "$159"
+  },
+  {
+    "image": "mueble4.png",
+    "name": "Modern Chair",
+    "description": "Ergonomic and lightweight design, ideal for dining rooms or desks.",
+    "price": "$89"
+  },
+  {
+    "image": "mueble5.png",
+    "name": "Modern Chair",
+    "description": "Ergonomic and lightweight design, ideal for dining rooms or modern workspaces.",
+    "price": "$89"
+  },
+  {
+    "image": "mueble6.jpg",
+    "name": "Modern Console Table",
+    "description": "Perfect for living rooms or entryways, combines closed storage and open shelves with an elegant design.",
+    "price": "$179"
+  },
+  {
+    "image": "mueble7.jpg",
+    "name": "Scandinavian Console Table",
+    "description": "Nordic style with light oak finish, ideal for modern entries or living rooms.",
+    "price": "$189"
+  },
+  {
+    "image": "mueble8.jpg",
+    "name": "Entertainment Center",
+    "description": "Modern furniture in dark wood, ideal for TV and decorative storage.",
+    "price": "$229"
+  },
+  {
+    "image": "mueble9.jpg",
+    "name": "Scandinavian Dresser",
+    "description": "Practical and elegant, with spacious drawers and light wood finish.",
+    "price": "$199"
+  },
+  {
+    "image": "mueble10.jpg",
+    "name": "Minimalist Shelf",
+    "description": "Clean and functional design with open shelves, ideal for books or decoration.",
+    "price": "$149"
+  },
+  {
+    "image": "mueble11.jpg",
+    "name": "Kitchen Shelf",
+    "description": "Open organizer made of wood and metal, perfect for utensils and decor in modern spaces.",
+    "price": "$119"
+  },
+  {
+    "image": "mueble12.jpg",
+    "name": "Kids House Bed",
+    "description": "Structure shaped like a little house, perfect for creating a cozy and fun environment in your child's room.",
+    "price": "$249"
+  }
+]
