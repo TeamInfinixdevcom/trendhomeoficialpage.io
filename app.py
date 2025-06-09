@@ -3,17 +3,17 @@ import json
 
 app = Flask(__name__)
 
-# ==== RUTA PRINCIPAL: Muestra INGLÉS ====
+# ==== HOME ESPAÑOL en "/" ====
 @app.route("/")
 def home():
-    return render_template("en/index.html")
+    return render_template("es/index.html")
 
-
-# ==== ESPAÑOL ====
+# ==== HOME ESPAÑOL alternativo en "/es" (opcional) ====
 @app.route("/es")
 def es_home():
     return render_template("es/index.html")
 
+# ==== RUTAS ESPAÑOL ====
 @app.route('/catalogo')
 def catalogo():
     with open('muebles.json', 'r', encoding='utf-8') as f:
@@ -47,8 +47,7 @@ def blog_detalle(post_id):
         return "Post no encontrado", 404
     return render_template("es/blog_detalle.html", post=post)
 
-
-# ==== INGLÉS ====
+# ==== RUTAS INGLÉS ====
 @app.route("/en")
 def en_home():
     return render_template("en/index.html")
@@ -85,7 +84,6 @@ def en_blog_detail(post_id):
     if not post:
         return "Post not found", 404
     return render_template("en/blog_detail.html", post=post)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
