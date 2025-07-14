@@ -1,0 +1,72 @@
+{% extends "en/base.html" %}
+
+{% block title %}Catalog - TrendHome{% endblock %}
+
+{% block content %}
+<div class="container pt-4">
+    <h1>TrendHome Furniture Catalog</h1>
+    <p>Explore our ready-to-assemble, modern, and functional designs, straight from London.</p>
+
+    <div class="row" id="catalog">
+        {% for furniture in furniture_list %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+            <a data-bs-toggle="modal" data-bs-target="#modalImage{{ loop.index }}">
+                <img src="{{ url_for('static', filename='img/' ~ furniture.image) }}" class="card-img-top" alt="{{ furniture.name }}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ furniture.name }}</h5>
+                <p class="card-text">{{ furniture.description }}</p>
+                <p class="card-text"><strong>Price:</strong> {{ furniture.price }}</p>
+                <button class="btn btn-outline-primary" onclick="addToCart('{{ furniture.name }}', '{{ furniture.price }}')">
+                <i class="bi bi-cart-plus"></i> Add to cart
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalImage{{ loop.index }}" tabindex="-1" aria-labelledby="modalLabel{{ loop.index }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel{{ loop.index }}">{{ furniture.name }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                <img src="{{ url_for('static', filename='img/' ~ furniture.image) }}" class="img-fluid rounded" alt="{{ furniture.name }}">
+                <p class="mt-3">{{ furniture.description }}</p>
+                <p><strong>Price:</strong> {{ furniture.price }}</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Purchase summary -->
+    <hr class="my-5">
+    <h2>Purchase Summary</h2>
+    <div id="purchase-summary" class="mb-4"></div>
+
+    <!-- Checkout button -->
+    <div class="text-center mt-4">
+        <a href="/en/checkout" class="btn btn-warning">
+        <i class="bi bi-check2-circle"></i> Checkout
+        </a>
+    </div>
+    </div>
+
+    <!-- Floating WhatsApp button -->
+    <a href="https://wa.me/50661514959" target="_blank" class="btn-wapp" title="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <a href="#purchase-summary" class="btn-cart" title="View cart">
+    <i class="bi bi-bag-check-fill"></i>
+    <span id="cart-counter" class="cart-badge">0</span>
+    </a>
+
+<!-- External script for cart -->
+<script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "en/base.html" %}
+
+{% block title %}Contact - TrendHome{% endblock %}
+
+{% block content %}
+<h1>Contact Us</h1>
+<p>If you have any questions or want a quote, write to us via WhatsApp or use this form.</p>
+
+<div class="row justify-content-center">
+    <!-- Contact Form -->
+    <div class="col-lg-6">
+        <form class="p-4 rounded shadow-sm bg-white" style="border:1px solid #f7e79b;">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@email.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone <span class="text-muted small">(optional)</span></label>
+            <input type="tel" class="form-control" id="phone" placeholder="Your phone">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="How can we help you?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning w-100 py-2 fw-bold" style="font-size:1.2rem;">
+            Send Message
+        </button>
+        </form>
+        <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="https://wa.me/50661514959" target="_blank" class="fs-3 text-success" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="fs-3 text-dark" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" class="fs-3 text-primary" title="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+    </div>
+    <!-- Map and Info -->
+    <div class="col-lg-5 mt-5 mt-lg-0 d-flex flex-column align-items-center">
+        <div class="w-100 rounded-3 shadow-sm overflow-hidden mb-3" style="min-height:220px; border:1px solid #f7e79b;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6814375394926!2d-0.1276471!3d51.5073506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b333444444f%3A0xb0ef39e2494e08f9!2sLondon,%20UK!5e0!3m2!1sen!2suk!4v1716956995055!5m2!1sen!2suk"
+            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </div>
+        <span class="text-muted small">Visit us in London, England</span>
+    </div>
+    </div>
+{% endblock %}
