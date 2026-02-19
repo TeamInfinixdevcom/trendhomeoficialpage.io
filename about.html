@@ -1,0 +1,41 @@
+{% extends "en/base.html" %}
+
+{% block title %}About Us - TrendHome{% endblock %}
+
+{% block content %}
+<section class="container my-5" id="about" data-aos="fade-up">
+  <h2 class="text-center mb-4 apple-title">About Us</h2>
+  <h5 class="text-center text-muted mb-4">
+    We are a team passionate about ready-to-assemble furniture design, led by a visionary architect.
+  </h5>
+  <p class="text-center mb-5" style="max-width:700px;margin:0 auto;">
+    At TrendHome, we combine traditional craftsmanship with innovation to create functional, modern, and customizable furniture.<br>
+    Our workshop is located in London, and each piece is assembled with dedication by our team.
+  </p>
+
+  <!-- Workshop images row (aligned and with hover effect) -->
+  <div class="row justify-content-center align-items-center gy-4 gx-5 mb-5">
+    <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+      <img src="{{ url_for('static', filename='img/taller1.png') }}" alt="TrendHome Workshop 1" class="img-fluid rounded shadow taller-img mb-2" style="max-height: 270px; object-fit: cover; aspect-ratio: 4/3; transition: transform 0.18s, box-shadow 0.22s;">
+      <span class="text-muted small mt-1">Furniture production</span>
+    </div>
+    <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+      <img src="{{ url_for('static', filename='img/taller2.png') }}" alt="TrendHome Workshop 2" class="img-fluid rounded shadow taller-img mb-2" style="max-height: 270px; object-fit: cover; aspect-ratio: 4/3; transition: transform 0.18s, box-shadow 0.22s;">
+      <span class="text-muted small mt-1">Our team at work</span>
+    </div>
+    <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+      <img src="{{ url_for('static', filename='img/taller3.png') }}" alt="TrendHome Workshop 3" class="img-fluid rounded shadow taller-img mb-2" style="max-height: 270px; object-fit: cover; aspect-ratio: 4/3; transition: transform 0.18s, box-shadow 0.22s;">
+      <span class="text-muted small mt-1">Quality control</span>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="text-center mt-4">
+    <a href="/en/catalog" class="btn btn-warning btn-lg fw-bold px-5" style="border-radius: 2rem;">
+      <i class="bi bi-box-seam me-2"></i>View Full Catalog
+    </a>
+  </div>
+</section>
+
+{% endblock %}
